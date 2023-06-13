@@ -1,0 +1,127 @@
+
+1. What is CSS?
+Ans: CSS stands for Cascading Style Sheets. It is a style sheet language used to describe the presentation of a document written in HTML or XML. CSS controls the layout, formatting, and appearance of web pages.
+
+2. What are the different ways to apply CSS styles?
+Ans: There are three primary ways to apply CSS styles:
+    # Inline: Using the style attribute directly within an HTML element.
+    # Internal: Embedding CSS code within the <style> tags in the <head> section of an HTML document.
+    # External: Linking an external CSS file using the <link> element.
+
+3. What is the syntax for writing CSS?
+Ans: The syntax for CSS includes a selector and one or more properties, each with a value.
+
+4. What is a selector in CSS?
+Ans: A selector in CSS is used to select the HTML element that you want to apply a style to.
+
+5. What is a property in CSS?
+Ans: A property in CSS is used to define the style you want to apply to an HTML element.
+
+6. What is a value in CSS?
+Ans: A value in CSS is used to define the specific settings for a property.
+
+7. How do you include CSS in an HTML document?
+Ans: You can include CSS in an HTML document by using the <link> tag or by using the <style> tag.
+
+8. What is the difference between external and internal CSS?
+Ans: External CSS is a separate file that is linked to the HTML document, while internal CSS is included within the HTML document itself.
+
+9. How do you comment in CSS?
+Ans: You can comment in CSS by using /* comment */ or // comment.
+
+10. Explain the CSS box model?
+Ans: The CSS box model is a design concept that describes how elements on a web page are structured and displayed. It consists of the content area, padding, border, and margin. The total width of an element is calculated as follows: width + padding + border + margin.
+
+11. What are the four parts of the box model?
+Ans: The four parts of the box model are content, padding, border, and margin.
+
+12. What is the difference between padding and margin in CSS?
+Ans: Padding is the space between an element's content and its border, while margin is the space between an element's border and the surrounding elements.
+
+13. How do you center an element horizontally in CSS?
+Ans: You can center an element horizontally by setting its left and right margins to auto.
+
+14. How do you center an element vertically in CSS?
+Ans: You can center an element vertically by setting its top and bottom margins to auto.
+
+15. What is the difference between absolute and relative positioning in CSS?
+Ans: Absolute positioning positions an element relative to its parent element, while relative positioning positions an element relative to its normal position.
+
+16. What is a pseudo-class in CSS?
+Ans: A pseudo-class in CSS is a keyword that is added to a selector to specify a certain state or condition of an element.
+
+17. What is a pseudo-element in CSS?
+Ans: A pseudo-element in CSS is a keyword that is added to a selector to style a specific part of an element.
+
+18. How do you create a hover effect in CSS?
+Ans: You can create a hover effect in CSS by using the :hover pseudo-class.
+
+19. What is the difference between display: block and display: inline in CSS?
+Ans: display: block makes an element a block-level element, while display: inline makes an element an inline-level element.
+
+20. What is the difference between width and max-width in CSS?
+Ans: Width sets the width of an element, while max-width sets the maximum width of an element.
+
+21. What is the difference between height and max-height in CSS?
+Ans: Height sets the height of an element, while max-height sets the maximum height of an element.
+
+22. What is the difference between background and background-color in CSS?
+Ans: Background sets the background properties of an element, while background-color sets the background color of an element.
+
+23. What is the difference between font-size and line-height in CSS?
+Ans: Font-size sets the size of the font, while line-height sets the height of each line of text.
+
+24. What is the difference between border-radius and border-collapse in
+
+
+25. What is the difference between margin:auto and margin:0 auto in CSS?
+Ans: margin:auto centers an element horizontally and vertically, while margin:0 auto only centers an element horizontally.
+
+26. What is the difference between float and clear in CSS?
+Ans: Float is used to position an element to the left or right of its container, while clear is used to prevent an element from wrapping around a floated element.
+
+27. What is the difference between position: static and position: relative in CSS?
+Ans: Position: static is the default positioning of an element, while position: relative positions an element relative to its normal position.
+
+28. What is the difference between display: none and visibility: hidden in CSS?
+Ans: Display: none completely removes an element from the document, while visibility: hidden hides the element but still takes up space on the page.
+
+29. What is the difference between opacity and visibility in CSS?
+Ans: Opacity controls the transparency of an element, while visibility controls whether an element is visible or not.
+
+30. How do you create a gradient background in CSS?
+Ans: You can create a gradient background in CSS using the linear-gradient() function.
+
+31. How do you create a responsive design in CSS?
+Ans: You can create a responsive design in CSS by using media queries, flexible layouts, and fluid images.
+
+32. What is the difference between em and rem in CSS?
+Ans: Em is a relative unit of measurement based on the font size of the parent element, while rem is a relative unit of measurement based on the root element.
+
+33. What is the difference between a class and an ID in CSS?
+Ans: A class can be used on multiple elements, while an ID is unique and can only be used on one element.
+
+34. How do you select all elements of a certain type in CSS?
+Ans: You can select all elements of a certain type in CSS using the element selector.
+
+35. How do you select an element with a certain class in CSS?
+Ans: You can select an element with a certain class in CSS using the .class selector.
+
+36. How do you select an element with a certain ID in CSS?
+Ans: You can select an element with a certain ID in CSS using the #id selector.
+
+37. How do you override a CSS property?
+Ans: You can override a CSS property by using a more specific selector or by using the !important keyword.
+
+38. How do you include a font in CSS?
+Ans: You can include a font in CSS by using the @font-face rule.
+
+39. How do you create a CSS animation?
+Ans: You can create a CSS animation by using the @keyframes rule and the animation property.
+
+40. What is the difference between a static and a fixed position in CSS?
+Ans: A static position is the default position of an element, while a fixed position positions an element relative to the viewport and stays in the same position even when the page is scrolled.
+
+
+
+
