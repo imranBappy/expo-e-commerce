@@ -6,7 +6,7 @@ import Carousel from '../components/Carousel';
 import Services from '../components/Services';
 import Products from '../components/Products';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
     const [address, setAddress] = useState("We are loading you location");
     const [locationEnabled, setLocationEnabled] = useState(false);
 
@@ -91,8 +91,13 @@ const HomeScreen = () => {
             {/* Categories */}
             <Services />
 
+            {/* Categories */}
+
+            <Services />
+
+
             {/* Products */}
-            <Products />
+            <Products navigation={navigation} />
 
         </ScrollView>
     )
@@ -103,7 +108,6 @@ export default HomeScreen
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
         paddingTop: Platform.OS === 'android' ? 10 : 0
     },
 });

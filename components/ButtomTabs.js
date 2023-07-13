@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import HomeScreen from '../screens/HomeScreen';
@@ -7,6 +6,9 @@ import CartScreen from '../screens/CartScreen';
 import CheckoutScreen from '../screens/Checkout';
 import { createStackNavigator } from '@react-navigation/stack';
 import ProfileScreen from '../screens/ProfileScreen';
+import SignupScreen from '../screens/SignupScreen';
+import SignInScreen from '../screens/SignInScreen';
+import ProductScreen from '../screens/ProductScreen';
 
 
 
@@ -18,6 +20,10 @@ function StackNavigator() {
                 headerShown: false,
             }} name="Home" component={HomeScreen} />
             <Stack.Screen name="Checkout" component={CheckoutScreen} />
+            <Stack.Screen name="Product" component={ProductScreen} />
+            <Stack.Screen name="Signup" component={SignupScreen} />
+            <Stack.Screen name="SignIn" component={SignInScreen} />
+
         </Stack.Navigator>
     );
 }
@@ -32,8 +38,22 @@ function ButtomTabs() {
         <Tab.Navigator
             initialRouteName="Home"
             screenOptions={{
-                tabBarActiveTintColor: '#e91e63',
+                tabBarActiveTintColor: '#088f8f',
+                tabBarStyle: {
+                    position: 'absolute', height: 60, bottom: 0, left: 0, right: 0, elevation: 20, backgroundColor: '#fff', borderTopWidth: 1,
+                    shadowColor: 'gray',
+                    shadowOpacity: 0.5,
+                    shadowRadius: 3,
+                    shadowOffset: {
+                        height: 3,
+                        width: 3
+                    },
+
+                    borderTopLeftRadius: 5,
+                    borderTopRightRadius: 5,
+                },
             }}
+
         >
             <Tab.Screen
 
@@ -41,6 +61,11 @@ function ButtomTabs() {
                 component={StackNavigator}
                 options={{
                     headerShown: false,
+                    tabBarLabelStyle: {
+                        width: 100,
+                        fontSize: 12,
+                    },
+
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="home" color={color} size={size} />
@@ -52,7 +77,11 @@ function ButtomTabs() {
                 component={CartScreen}
                 options={{
                     // headerShown: false,
-                    tabBarLabel: 'Updates',
+                    tabBarLabelStyle: {
+                        width: 100,
+                        fontSize: 12,
+                    },
+                    tabBarLabel: 'Cart',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="cart" size={size} color={color} />
                     ),
@@ -63,7 +92,11 @@ function ButtomTabs() {
                 component={ProfileScreen}
                 options={{
                     // headerShown: false,
-                    tabBarLabel: 'Account_1_',
+                    tabBarLabelStyle: {
+                        width: 100,
+                        fontSize: 12,
+                    },
+                    tabBarLabel: 'Account',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="account" color={color} size={size} />
                     ),

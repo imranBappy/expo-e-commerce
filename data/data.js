@@ -71,8 +71,8 @@ const services = [
 const products = [
   {
     id: "0",
-    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/murgi-p_z4ophe.jpg",
-    name: "Cock",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689282586/expo/phone-100_moax90.png",
+    name: "Cock is product in bd Cock is product in bd",
     quantity: 2,
     price: 10,
   },

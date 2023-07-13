@@ -5,7 +5,7 @@ import { addToCart, decrementQuantity, incrementQuantity } from '../redux/featur
 import { useDispatch, useSelector } from 'react-redux';
 import { decrementQty, incrementQty } from '../redux/features/productFeatures';
 
-const Product = (props) => {
+const Product = ({ navigation, ...props }) => {
     const { name, image, price, id } = props.item;
     const cart = useSelector((state) => state.cart.cart)
     const dispatch = useDispatch();
@@ -15,115 +15,76 @@ const Product = (props) => {
     }
 
     return (
-        <View >
-            <Pressable style={{
-                backgroundColor: "#f8f8f8", padding: 10, margin: 10, borderRadius: 8,
-                flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems:
-                    "center"
+        <Pressable
+            onPress={() => navigation.navigate("Product")}
+            style={{
+                width: "50%",
+
             }}>
-                <View>
-                    <Image source={{ uri: image }} style={{ width: 70, height: 70 }} />
+            <View
+
+                style={{
+                    height: 300,
+                    marginHorizontal: 5,
+                    marginVertical: 5,
+                    backgroundColor: "#fff",
+                    borderRadius: 10,
+                    padding: 10,
+                    shadowColor: "#000",
+                    shadowOffset: {
+                        width: 0,
+                        height: 10,
+                    },
+                    shadowOpacity: 0.5,
+                    shadowRadius: 10.0,
+                    elevation: 3,
+                }}>
+
+                <View
+                    style={{
+                        width: "100%",
+                        height: "70%",
+                        borderRadius: 35,
+                        backgroundColor: "#fff",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginBottom: 10
+                    }}
+                >
+                    <Image
+                        source={{ uri: image }} style={{
+                            width: "100%",
+                            height: "100%",
+                            resizeMode: "contain"
+
+                        }} />
                 </View>
-                <View>
-                    <Text style={{ width: 83, fontSize: 17, fontWeight: "500", marginBottom: 7 }}>{name}</Text>
-                    <Text style={{ width: 60, fontSize: 15, color: "gray" }}>${price}</Text>
+                <View
+                    style={{
+                        width: "100%",
+                        height: "30%",
+                    }}
+                >
+                    <Text style={{
+                        width: "100%",
+                        fontSize: 15,
+                        fontWeight: "bold",
+                        color: "#000",
+                        marginBottom: 10
+
+                    }}>{name}</Text>
+                    <Text style={{
+                        width: 60,
+                        fontSize: 16,
+                        fontWeight: "bold",
+                        color: "red"
+
+                    }}>${price}</Text>
                 </View>
-                {cart?.some((c) => c.id === id) ? (
-                    <Pressable
-                        style={{
-                            flexDirection: "row",
-                            paddingHorizontal: 10,
-                            paddingVertical: 5,
-                        }}
-                    >
-                        <Pressable
-                            onPress={() => {
-                                dispatch(decrementQty(props.item))
-                                // dispatch(decrementQuantity(props.item))
-                            }}
-                            style={{
-                                width: 26,
-                                height: 26,
-                                borderRadius: 13,
-                                borderColor: "#BEBEBE",
-                                backgroundColor: "#E0E0E0",
-                                justifyContent: "center",
-                                alignContent: "center",
-                            }}
-                        >
-                            <Text
-                                style={{
-                                    fontSize: 20,
-                                    color: "#088F8F",
-                                    paddingHorizontal: 6,
-                                    fontWeight: "600",
-                                    textAlign: "center",
-                                }}
-                            >
-                                -
-                            </Text>
-                        </Pressable>
 
-                        <Pressable>
-                            <Text
-                                style={{
-                                    fontSize: 19,
-                                    color: "#088F8F",
-                                    paddingHorizontal: 8,
-                                    fontWeight: "600",
-                                }}
-                            >
-                                {props.item.quantity}
-                            </Text>
-                        </Pressable>
 
-                        <Pressable
-                            onPress={() => {
-                                dispatch(incrementQuantity(props.item))
-                                dispatch(incrementQty(props.item))
-
-                            }}
-                            style={{
-                                width: 26,
-                                height: 26,
-                                borderRadius: 13,
-                                borderColor: "#BEBEBE",
-                                backgroundColor: "#E0E0E0",
-                                justifyContent: "center",
-                                alignContent: "center",
-                            }}
-                        >
-                            <Text
-                                style={{
-                                    fontSize: 20,
-                                    color: "#088F8F",
-                                    paddingHorizontal: 6,
-                                    fontWeight: "600",
-                                    textAlign: "center",
-                                }}
-                            >
-                                +
-                            </Text>
-                        </Pressable>
-                    </Pressable>
-                ) : (
-                    <Pressable onPress={addToCartHandle} style={{ width: 50 }} >
-                        <Text
-                            style={{
-                                borderColor: "gray",
-                                borderRadius: 5,
-                                borderWidth: 0.8,
-                                color: "#088f8f",
-                                textAlign: "center",
-                                padding: 5,
-                                fontSize: 16,
-                                fontWeight: "bold"
-                            }} >Add</Text>
-                    </Pressable>
-                )}
-
-            </Pressable>
-        </View>
+            </View>
+        </Pressable>
     )
 }
 

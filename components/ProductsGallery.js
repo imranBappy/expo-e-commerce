@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import { SliderBox } from "react-native-image-slider-box";
 
-const Carousel = () => {
+const ProductGallery = () => {
     const images = [
         "https://res.cloudinary.com/do5erbtee/image/upload/v1689235050/expo/slide_v6ruf9.jpg",
         "https://res.cloudinary.com/do5erbtee/image/upload/v1689235152/expo/slid_3_nbnro4.jpg",
@@ -14,7 +14,7 @@ const Carousel = () => {
                 images={images}
                 autoPlay={true}
                 circleLoop
-                sliderBoxHeight={150}
+                sliderBoxHeight={400}
                 dotColor={"#13274F"}
                 inactiveDotColor="#90A4AE"
                 ImageComponentStyle={{
@@ -26,6 +26,6 @@ const Carousel = () => {
     );
 };
 
-export default Carousel;
+export default ProductGallery;
 
 const styles = StyleSheet.create({});
