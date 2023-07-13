@@ -5,7 +5,7 @@ import { services } from '../data/data'
 const Services = () => {
     return (
         <View style={{ marginTop: 10, padding: 10 }}>
-            <Text style={{ fontSize: 16, fontWeight: "500", marginBottom: 7 }} >{"Our Services"}</Text>
+            <Text style={{ fontSize: 16, fontWeight: "500", marginBottom: 7 }} >{"Our Categories"}</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} >
                 {
                     services.map((service, index) =>

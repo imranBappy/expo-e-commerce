@@ -5,7 +5,7 @@ import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import Carousel from '../components/Carousel';
 import Services from '../components/Services';
 import Products from '../components/Products';
-import { useSelector } from 'react-redux';
+
 const HomeScreen = () => {
     const [address, setAddress] = useState("We are loading you location");
     const [locationEnabled, setLocationEnabled] = useState(false);
@@ -59,9 +59,6 @@ const HomeScreen = () => {
 
         }
     }
-
-
-
     return (
         <ScrollView style={styles.container}>
             {/* Location and Profile */}

@@ -25,23 +25,45 @@ const images = [
 const services = [
   {
     id: "0",
-    image: "https://cdn-icons-png.flaticon.com/128/3003/3003984.png",
-    name: "Washing",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/murgi-p_z4ophe.jpg",
+    name: "Cock",
+  },
+  {
+    id: "15",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235701/pro/cow-p_ldtlv5.jpg",
+    name: "Cow",
+
   },
   {
     id: "11",
-    image: "https://cdn-icons-png.flaticon.com/128/2975/2975175.png",
-    name: "Laundry",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/fish-p_fhxdpi.jpg",
+    name: "Hilsa Fish",
+
   },
   {
     id: "12",
-    image: "https://cdn-icons-png.flaticon.com/128/9753/9753675.png",
-    name: "Wash",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/mirchi-p_fxndxr.jpg",
+    name: "Green Chilli",
+
   },
   {
     id: "13",
-    image: "https://cdn-icons-png.flaticon.com/128/995/995016.png",
-    name: "Cleaning",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/goat-p_uj2mej.jpg",
+    name: "Goat",
+
+  },
+  {
+    id: "14",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/mango-p_xzerxx.jpg",
+    name: "Mango",
+
+  },
+
+  {
+    id: "16",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235701/pro/egg-p_tyaxqw.jpg",
+    name: "Egg",
+
   },
 ];
 
@@ -49,51 +71,51 @@ const services = [
 const products = [
   {
     id: "0",
-    image: "https://cdn-icons-png.flaticon.com/128/4643/4643574.png",
-    name: "Shirt",
-    quantity: 0,
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/murgi-p_z4ophe.jpg",
+    name: "Cock",
+    quantity: 2,
     price: 10,
   },
   {
     id: "11",
-    image: "https://cdn-icons-png.flaticon.com/128/892/892458.png",
-    name: "T-shirt",
-    quantity: 0,
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/fish-p_fhxdpi.jpg",
+    name: "Hilsa Fish",
+    quantity: 1,
     price: 10,
   },
   {
     id: "12",
-    image: "https://cdn-icons-png.flaticon.com/128/9609/9609161.png",
-    name: "dresses",
-    quantity: 0,
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/mirchi-p_fxndxr.jpg",
+    name: "Green Chilli",
+    quantity: 1,
     price: 10,
   },
   {
     id: "13",
-    image: "https://cdn-icons-png.flaticon.com/128/599/599388.png",
-    name: "jeans",
-    quantity: 0,
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/goat-p_uj2mej.jpg",
+    name: "Goat",
+    quantity: 1,
     price: 10,
   },
   {
     id: "14",
-    image: "https://cdn-icons-png.flaticon.com/128/9431/9431166.png",
-    name: "Sweater",
-    quantity: 0,
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/mango-p_xzerxx.jpg",
+    name: "Mango",
+    quantity: 1,
     price: 10,
   },
   {
     id: "15",
-    image: "https://cdn-icons-png.flaticon.com/128/3345/3345397.png",
-    name: "shorts",
-    quantity: 0,
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235701/pro/cow-p_ldtlv5.jpg",
+    name: "Cow",
+    quantity: 1,
     price: 10,
   },
   {
     id: "16",
-    image: "https://cdn-icons-png.flaticon.com/128/293/293241.png",
-    name: "Sleeveless",
-    quantity: 0,
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235701/pro/egg-p_tyaxqw.jpg",
+    name: "Egg",
+    quantity: 1,
     price: 10,
   },
 ];

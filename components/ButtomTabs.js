@@ -6,15 +6,10 @@ import HomeScreen from '../screens/HomeScreen';
 import CartScreen from '../screens/CartScreen';
 import CheckoutScreen from '../screens/Checkout';
 import { createStackNavigator } from '@react-navigation/stack';
+import ProfileScreen from '../screens/ProfileScreen';
 
 
-function Profile() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Profile!</Text>
-        </View>
-    );
-}
+
 const Stack = createStackNavigator();
 function StackNavigator() {
     return (
@@ -65,7 +60,7 @@ function ButtomTabs() {
             />
             <Tab.Screen
                 name="Profile"
-                component={Profile}
+                component={ProfileScreen}
                 options={{
                     // headerShown: false,
                     tabBarLabel: 'Account_1_',
