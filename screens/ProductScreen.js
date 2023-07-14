@@ -4,11 +4,30 @@ import { ScrollView } from 'react-native-gesture-handler'
 import Carousel from '../components/Carousel'
 import ProductGallery from '../components/ProductsGallery'
 import { EvilIcons, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
+import { useRoute } from '@react-navigation/core'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart } from '../redux/features/cartFeatures'
+import { incrementQty } from '../redux/features/productFeatures'
 
 const ProductScreen = () => {
+    const route = useRoute()
+    const id = route.params?.id
+    const products = useSelector((state) => state.product.product);
+    const product = products.find((item) => item.id === id) || {}
+    const { image } = product || {}
+
+    const dispatch = useDispatch();
+    const addToCartHandle = () => {
+        dispatch(addToCart(product))
+        dispatch(incrementQty(product))
+    }
+
+    const handleBuyNow = () => {
+        alert("Buy Now")
+    }
     return (
         <ScrollView style={styles.container}>
-            <ProductGallery />
+            <ProductGallery images={[image]} />
             <View style={{ marginVertical: 20, marginHorizontal: 10 }}>
                 <Text style={styles.name}>Number One Hero Alom Cow</Text>
             </View>
@@ -33,7 +52,6 @@ const ProductScreen = () => {
                 padding: 10
 
             }}>
-
 
 
                 <View>
@@ -123,9 +141,7 @@ const ProductScreen = () => {
 
                         }}
 
-                        onPress={() => {
-                            alert("Order Success")
-                        }}>
+                        onPress={addToCartHandle}>
                         <Text
                             style={{
                                 color: "#fff",
@@ -144,9 +160,7 @@ const ProductScreen = () => {
                             alignItems: "center"
 
                         }}
-                        onPress={() => {
-                            alert("Order Success")
-                        }}
+                        onPress={handleBuyNow}
                     >
                         <Text
                             style={{

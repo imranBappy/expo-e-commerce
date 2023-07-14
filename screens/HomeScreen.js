@@ -7,7 +7,7 @@ import Services from '../components/Services';
 import Products from '../components/Products';
 
 const HomeScreen = ({ navigation }) => {
-    const [address, setAddress] = useState("We are loading you location");
+    const [address, setAddress] = useState("Loading...");
     const [locationEnabled, setLocationEnabled] = useState(false);
 
     useEffect(() => {
@@ -47,6 +47,7 @@ const HomeScreen = ({ navigation }) => {
                 ]);
         }
         const { coords } = await Location.getCurrentPositionAsync();
+
         if (coords) {
             const { latitude, longitude } = coords;
             let res = await Location.reverseGeocodeAsync({ latitude, longitude });
@@ -54,9 +55,9 @@ const HomeScreen = ({ navigation }) => {
             for (let item of res) {
                 currAddress = `${item.district}, ${item.city}`;
             }
-
-            setAddress(currAddress)
-
+            if (currAddress) {
+                setAddress(currAddress)
+            }
         }
     }
     return (
@@ -71,7 +72,7 @@ const HomeScreen = ({ navigation }) => {
                     </View>
                 </View>
                 <Pressable>
-                    <Image style={{ width: 45, height: 45, borderRadius: 25, borderWidth: 2, borderColor: "red" }} source={{ uri: "https://yt3.ggpht.com/yti/AHyvSCBwyxeNtPkmWSAD61WMhahQtMElFwPleFnwk9AGjw=s88-c-k-c0x00ffffff-no-rj-mo" }} />
+                    <Image style={{ width: 45, height: 45, borderRadius: 25, borderWidth: 2, borderColor: "#088F8F" }} source={{ uri: "https://yt3.ggpht.com/yti/AHyvSCBwyxeNtPkmWSAD61WMhahQtMElFwPleFnwk9AGjw=s88-c-k-c0x00ffffff-no-rj-mo" }} />
                 </Pressable>
             </View>
             {/* Search bar */}
@@ -82,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
                 borderRadius: 6
             }}>
                 <TextInput placeholder='Search for items of More' />
-                <Ionicons name="ios-search" size={24} color="#fd5c63" />
+                <Ionicons name="ios-search" size={24} color="#088F8F" />
             </View>
 
             {/* Carousel */}

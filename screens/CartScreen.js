@@ -2,6 +2,7 @@ import { Pressable, ScrollView, StyleSheet, Text, Touchable, View } from 'react-
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Product from '../components/Product'
+import ProductItem from '../components/CartItem'
 
 const CartScreen = ({ navigation }) => {
     const cart = useSelector((state) => state.cart.cart)
@@ -10,7 +11,7 @@ const CartScreen = ({ navigation }) => {
         <ScrollView style={styles.container}>
             <View>
                 {
-                    cart?.map((item) => <Product
+                    cart?.map((item) => <ProductItem
                         key={item.id}
                         item={item}
                     />)

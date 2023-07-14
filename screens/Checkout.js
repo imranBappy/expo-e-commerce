@@ -4,6 +4,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import Product from '../components/Product'
 import InputAddress from '../components/InputAddress'
+import CardItem from '../components/CartItem'
 
 const CheckoutScreen = () => {
     const cart = useSelector((state) => state.cart.cart)
@@ -13,13 +14,15 @@ const CheckoutScreen = () => {
         <ScrollView style={styles.container}>
             <View>
                 {
-                    cart?.map((item) => <Product
+                    cart?.map((item) => <CardItem
                         key={item.id}
                         item={item}
                     />)
                 }
             </View>
             <InputAddress />
+            <InputAddress />
+
             <View style={{
                 marginTop: 10,
                 flexDirection: "row", justifyContent: "space-between",

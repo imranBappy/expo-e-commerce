@@ -28,4 +28,3 @@ const Carousel = () => {
 
 export default Carousel;
 
-const styles = StyleSheet.create({});

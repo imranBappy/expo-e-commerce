@@ -16,10 +16,9 @@ const Product = ({ navigation, ...props }) => {
 
     return (
         <Pressable
-            onPress={() => navigation.navigate("Product")}
+            onPress={() => navigation.navigate("Product", { id })}
             style={{
                 width: "50%",
-
             }}>
             <View
 

@@ -2,12 +2,9 @@ import { StyleSheet, View } from "react-native";
 import React from "react";
 import { SliderBox } from "react-native-image-slider-box";
 
-const ProductGallery = () => {
-    const images = [
-        "https://res.cloudinary.com/do5erbtee/image/upload/v1689235050/expo/slide_v6ruf9.jpg",
-        "https://res.cloudinary.com/do5erbtee/image/upload/v1689235152/expo/slid_3_nbnro4.jpg",
-        "https://res.cloudinary.com/do5erbtee/image/upload/v1689235391/expo/slied2_hwjbpi.jpg",
-    ];
+const ProductGallery = (props) => {
+    const { images = [] } = props
+
     return (
         <View>
             <SliderBox
