@@ -66,6 +66,50 @@ const services = [
 
   },
 ];
+const brands = [
+  {
+    id: "0",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7cA2LaGgtOFFQNab-xWnfPWU48I9Y1wC6u1Y-IvXtjA&s",
+    name: "MIST",
+  },
+  {
+    id: "15",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689329899/expo/IMG_8207_1_kdswqc.jpg",
+    name: "P&G",
+
+  },
+  {
+    id: "11",
+    image: "https://seeklogo.com/images/P/pran-logo-416D020A91-seeklogo.com.png",
+    name: "Pran",
+
+  },
+  {
+    id: "12",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMW5qDSKL_1de_UVlYZm5FcHJllETwKf26XsiUI05m&s",
+    name: "Akij",
+
+  },
+  {
+    id: "13",
+    image: "https://brcutrer.com/wp-content/uploads/2022/01/BRC-BullLogo-2-FINAL.png",
+    name: "BRC",
+
+  },
+  {
+    id: "14",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/mango-p_xzerxx.jpg",
+    name: "Mango",
+
+  },
+
+  {
+    id: "16",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235701/pro/egg-p_tyaxqw.jpg",
+    name: "Egg",
+
+  },
+];
 
 // products data 
 const products = [
@@ -118,6 +162,13 @@ const products = [
     quantity: 1,
     price: 10,
   },
+  {
+    id: "17",
+    image: "https://res.cloudinary.com/do5erbtee/image/upload/v1689235702/pro/mango-p_xzerxx.jpg",
+    name: "Mango",
+    quantity: 1,
+    price: 10,
+  },
 ];
 
-export { images, services, products };
+export { images, services, products, brands };

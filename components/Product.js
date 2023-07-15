@@ -1,9 +1,10 @@
 // rnfes
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { addToCart, decrementQuantity, incrementQuantity } from '../redux/features/cartFeatures';
+import { addToCart } from '../redux/features/cartFeatures';
 import { useDispatch, useSelector } from 'react-redux';
-import { decrementQty, incrementQty } from '../redux/features/productFeatures';
+import { incrementQty } from '../redux/features/productFeatures';
+import Button from './Button';
 
 const Product = ({ navigation, ...props }) => {
     const { name, image, price, id } = props.item;

@@ -5,6 +5,11 @@ import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import Carousel from '../components/Carousel';
 import Services from '../components/Services';
 import Products from '../components/Products';
+import { services } from '../data/data'
+import { brands } from '../data/data'
+import Brands from '../components/Brands';
+import Categores from './Categores';
+
 
 const HomeScreen = ({ navigation }) => {
     const [address, setAddress] = useState("Loading...");
@@ -90,12 +95,14 @@ const HomeScreen = ({ navigation }) => {
             <Carousel />
 
             {/* Categories */}
-            <Services />
+            <Services data={services} title="Categores" >
+                <Categores />
+            </Services>
 
-            {/* Categories */}
-
-            <Services />
-
+            {/* Brands */}
+            <Services data={services} title="Brands" >
+                <Brands />
+            </Services>
 
             {/* Products */}
             <Products navigation={navigation} />

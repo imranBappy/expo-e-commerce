@@ -24,6 +24,7 @@ const Products = ({ navigation }) => {
                     justifyContent: "space-between",
                     alignItems: "center",
                     marginBottom: 10,
+                    marginHorizontal: 2
                 }}
             >
                 {

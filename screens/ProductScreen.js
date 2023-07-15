@@ -8,13 +8,14 @@ import { useRoute } from '@react-navigation/core'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../redux/features/cartFeatures'
 import { incrementQty } from '../redux/features/productFeatures'
+import Button from '../components/Button'
 
 const ProductScreen = () => {
     const route = useRoute()
     const id = route.params?.id
     const products = useSelector((state) => state.product.product);
     const product = products.find((item) => item.id === id) || {}
-    const { image } = product || {}
+    const { image, name, stock, price, brand, category } = product || {}
 
     const dispatch = useDispatch();
     const addToCartHandle = () => {
@@ -29,7 +30,7 @@ const ProductScreen = () => {
         <ScrollView style={styles.container}>
             <ProductGallery images={[image]} />
             <View style={{ marginVertical: 20, marginHorizontal: 10 }}>
-                <Text style={styles.name}>Number One Hero Alom Cow</Text>
+                <Text style={styles.name}>{name}</Text>
             </View>
 
             <View>
@@ -118,60 +119,28 @@ const ProductScreen = () => {
                         fontWeight: "bold",
                         color: "red",
                         fontSize: 17
-                    }}>$312308 </Text>
+                    }}>${price} </Text>
                 </View>
                 <View
                     style={{
                         flexDirection: "row",
-                        justifyContent: "space-between",
                         marginHorizontal: 10,
                         marginVertical: 10,
-                        alignItems: "center"
+                        alignItems: "center",
+                        gap: 5,
 
                     }}
                 >
-                    <Pressable
-                        style={{
-
-                            backgroundColor: "#088f8f",
-                            padding: 10,
-                            borderRadius: 5,
-                            width: "48%",
-                            alignItems: "center"
-
-                        }}
-
-                        onPress={addToCartHandle}>
-                        <Text
-                            style={{
-                                color: "#fff",
-                                fontSize: 18,
-                                fontWeight: "bold"
-
-                            }}
-                        >Add to Cart</Text>
-                    </Pressable >
-                    <Pressable
-                        style={{
-                            backgroundColor: "#088f8f",
-                            padding: 10,
-                            borderRadius: 5,
-                            width: "48%",
-                            alignItems: "center"
-
-                        }}
+                    <Button
+                        title="Add to Cart"
+                        onPress={addToCartHandle}
+                    />
+                    <Button
+                        title="Buy Now"
                         onPress={handleBuyNow}
-                    >
-                        <Text
-                            style={{
+                    />
 
-                                color: "#fff",
-                                fontSize: 18,
-                                fontWeight: "bold"
 
-                            }}
-                        >Buy Now</Text>
-                    </Pressable>
                 </View>
             </View>
             <View

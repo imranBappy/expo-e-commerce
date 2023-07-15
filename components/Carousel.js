@@ -4,9 +4,9 @@ import { SliderBox } from "react-native-image-slider-box";
 
 const Carousel = () => {
     const images = [
-        "https://res.cloudinary.com/do5erbtee/image/upload/v1689235050/expo/slide_v6ruf9.jpg",
-        "https://res.cloudinary.com/do5erbtee/image/upload/v1689235152/expo/slid_3_nbnro4.jpg",
-        "https://res.cloudinary.com/do5erbtee/image/upload/v1689235391/expo/slied2_hwjbpi.jpg",
+        "https://res.cloudinary.com/do5erbtee/image/upload/v1689394986/slide/side1_fl8ogs.png",
+        "https://res.cloudinary.com/do5erbtee/image/upload/v1689394985/slide/side2_lxa7y2.png",
+        "https://res.cloudinary.com/do5erbtee/image/upload/v1689394986/slide/side3_yutc5s.png",
     ];
     return (
         <View>
